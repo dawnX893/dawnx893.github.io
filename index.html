@@ -1,19 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>dawnX893 | Live</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dawnX893 | Glassmorphism</title>
     <style>
-        body { background: #121212; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .container { text-align: center; border: 1px solid #333; padding: 50px; border-radius: 15px; background: #1e1e1e; }
-        h1 { color: #00ff88; }
-        p { color: #aaa; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            height: 100vh; display: flex; justify-content: center; align-items: center; 
+            background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+            font-family: sans-serif; overflow: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px;
+            padding: 40px; width: 320px; text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        h1 { color: #00ff88; margin-bottom: 10px; font-size: 2rem; }
+        p { color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; }
+        .status { margin-top: 20px; font-weight: bold; color: #fff; }
+        .circle {
+            position: absolute; border-radius: 50%;
+            background: linear-gradient(45deg, #00ff88, #00bdff);
+            z-index: -1; filter: blur(30px);
+        }
+        .c1 { width: 200px; height: 200px; top: 10%; left: 20%; opacity: 0.4; }
+        .c2 { width: 250px; height: 250px; bottom: 10%; right: 20%; opacity: 0.3; }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="glass-card">
         <h1>dawnX893</h1>
-        <p>Website updated via Termux</p>
-        <p>Status: 🟢 Online</p>
+        <p>Developer | Termux Enthusiast</p>
+        <div class="status">🟢 Online & Live</div>
+        <p style="margin-top: 15px; font-size: 0.7rem;">Updated via Termux</p>
     </div>
 </body>
 </html>
