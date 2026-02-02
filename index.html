@@ -3,41 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dawnX893 | Glassmorphism</title>
+    <title>dawnX893 | Links</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; }
         body { 
-            height: 100vh; display: flex; justify-content: center; align-items: center; 
+            min-height: 100vh; display: flex; justify-content: center; align-items: center; 
             background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
-            font-family: sans-serif; overflow: hidden;
+            font-family: 'Segoe UI', Roboto, sans-serif; padding: 20px;
         }
-        .glass-card {
+        .container {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px;
-            padding: 40px; width: 320px; text-align: center;
+            padding: 40px 20px; width: 100%; max-width: 400px; text-align: center;
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
-        h1 { color: #00ff88; margin-bottom: 10px; font-size: 2rem; }
-        p { color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; }
-        .status { margin-top: 20px; font-weight: bold; color: #fff; }
+        .profile-img { width: 90px; height: 90px; border-radius: 50%; border: 2px solid #00ff88; margin-bottom: 15px; }
+        h1 { color: #fff; font-size: 1.5rem; margin-bottom: 5px; }
+        p { color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; margin-bottom: 25px; }
+        
+        /* Buttons Style */
+        .link-btn {
+            display: block; background: rgba(255, 255, 255, 0.1);
+            color: white; padding: 15px; margin-bottom: 12px;
+            border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease; font-weight: 500;
+        }
+        .link-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            border-color: #00ff88;
+        }
         .circle {
             position: absolute; border-radius: 50%;
             background: linear-gradient(45deg, #00ff88, #00bdff);
-            z-index: -1; filter: blur(30px);
+            z-index: -1; filter: blur(40px);
         }
-        .c1 { width: 200px; height: 200px; top: 10%; left: 20%; opacity: 0.4; }
-        .c2 { width: 250px; height: 250px; bottom: 10%; right: 20%; opacity: 0.3; }
+        .c1 { width: 150px; height: 150px; top: 15%; left: 10%; opacity: 0.3; }
+        .c2 { width: 200px; height: 200px; bottom: 15%; right: 10%; opacity: 0.2; }
     </style>
 </head>
 <body>
     <div class="circle c1"></div>
     <div class="circle c2"></div>
-    <div class="glass-card">
-        <h1>dawnX893</h1>
-        <p>Developer | Termux Enthusiast</p>
-        <div class="status">🟢 Online & Live</div>
-        <p style="margin-top: 15px; font-size: 0.7rem;">Updated via Termux</p>
+    
+    <div class="container">
+        <img src="https://github.com/dawnX893.png" alt="Profile" class="profile-img">
+        <h1>@dawnX893</h1>
+        <p>Termux Developer | Tech Enthusiast</p>
+
+        <a href="https://facebook.com/iyong-profile" class="link-btn">Facebook</a>
+        <a href="https://github.com/dawnX893" class="link-btn">GitHub Projects</a>
+        <a href="https://t.me/iyong-username" class="link-btn">Telegram</a>
+        <a href="mailto:your-email@gmail.com" class="link-btn">Contact Me</a>
+        
+        <p style="margin-top: 20px; font-size: 0.7rem; opacity: 0.4;">© 2026 dawnX893</p>
     </div>
 </body>
 </html>
